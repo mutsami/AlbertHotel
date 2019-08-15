@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$alberthotel-primary: mat-palette($mat-teal, 200);
+$alberthotel-accent:  mat-palette($mat-teal, 50);
+
+// The warn palette is optional (defaults to red).
+$alberthotel-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$alberthotel: mat-light-theme($alberthotel-primary, $alberthotel-accent, $alberthotel-warn);
+
+@include angular-material-theme($alberthotel);
+
+.navtabs-container{
+    background-color: mat-color($alberthotel-accent);
+}
